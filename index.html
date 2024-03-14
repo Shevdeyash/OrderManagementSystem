@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Order Management System</h1>
+  <div class="container">
+    <div class="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="#add-order">Add Order</a></li>
+        <li><a href="#view-orders">View Orders</a></li>
+        <li><a href="#update-order">Update Order</a></li>
+        <li><a href="#save-to-excel">Save to Excel</a></li>
+      </ul>
+    </div>
+    <div class="content">
+      <h3 id="add-order">Add Order</h3>
+      <form id="add-order-form">
+        <label for="customer-name">Customer Name:</label>
+        <input type="text" id="customer-name" name="customer-name" required>
+        <br>
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" required>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" required>
+        <br>
+        <button type="submit">Add Order</button>
+      </form>
+
+      <h3 id="view-orders">View Orders</h3>
+      <div id="view-orders-list"></div>
+
+      <h3 id="update-order">Update Order</h3>
+      <form id="update-order-form">
+        <label for="order-id">Order ID:</label>
+        <input type="text" id="order-id" name="order-id" required>
+        <br>
+        <label for="updated-customer-name">Updated Customer Name:</label>
+        <input type="text" id="updated-customer-name" name="updated-customer-name">
+        <br>
+        <label for="updated-item">Updated Item:</label>
+        <input type="text" id="updated-item" name="updated-item">
+        <br>
+        <label for="updated-quantity">Updated Quantity:</label>
+        <input type="number" id="updated-quantity" name="updated-quantity" min="1">
+        <br>
+        <button type="submit">Update Order</button>
+      </form>
+
+      <h3 id="save-to-excel">Save to Excel</h3>
+      <button id="save-to-excel-btn">Save to Excel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
